@@ -57,13 +57,19 @@ input,textarea,button {
 	-moz-appearance: none;
 	appearance: none;
 }
+input:focus,textarea:focus,button:focus {
+	outline: 0;
+}
+
+
 
 /** ========================================
  * @CUSTOM
  * カスタムプロパティ
  * ====================================== */
 :root {
-  --color-primaly: #90ae23;
+	--color-primaly: #90ae23;
+	--color-secondly: #62368E;
 }
 
 body {
@@ -85,9 +91,10 @@ header {
 	z-index: 0;
 	position: relative;
 	width: 100%;
-	padding: 3.5rem;
+	padding: 6.4rem 3.5rem;
 	background: url(../images/main_visual.jpg) center center no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	color: #fff;
 	text-align: center;
 }
@@ -122,6 +129,10 @@ main {
  * @CONTENT
  * コンテンツ
  * ====================================== */
+.full_width {
+	width: 100%;
+}
+
 .content {
 	max-width: 1024px;
 	margin: 8rem auto 0;
@@ -176,12 +187,10 @@ main {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	overflow-wrap: break-word;
+	transition: all .3s;
 }
 .card:hover {
-    animation-name: cardUp;
-    animation-duration: .5s;
-	animation-timing-function: liner;
-	animation-fill-mode: both;
+	transform: translateY(-1rem);
 }
 
 
@@ -223,23 +232,118 @@ main {
 	color: #fff;
 	text-decoration: none;
 	transform: translate(-50%, -50%);
-	transition: all .3s;
-
 }
 .card_link a:hover {
-	transform: rotate(3deg) translate(-50%, -50%) scale(1.1);
-	box-shadow: none;
+	/* transform: rotate(3deg) translate(-50%, -50%) scale(1.1);
+	box-shadow: none; */
 }
 
 
-@keyframes cardUp {
+
+
+/* ------------------------------
+ * news
+ * お知らせ
+ * --------------------------- */
+.full_width_news {
+	background: #f5f5f5;
+}
+.content_news {
+	padding: 2.4rem 0;
+}
+
+.news_list li:not(:first-child) {
+	margin-top: 1.8rem;
+}
+.news_list time {
+	margin-right: .8rem;
+}
+
+.news_list a {
+	overflow: hidden;
+	display: inline-block;
+	width: calc(100% - 10rem);
+	color: #62368E;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+
+}
+.news_list a:hover {
+	opacity: .5;
+}
+
+
+/* ------------------------------
+ * subscribe
+ * LCWに申し込む
+ * --------------------------- */
+.subscribe_form {
+	text-align: center;
+}
+
+.subscribe_form label {
+	margin-right: 1rem;
+	color: #90ae23;
+	font-size: 1.2rem;
+}
+
+.subscribe_form input[type=text] {
+	width: 100%;
+	padding: .8rem;
+	border: 2px solid #90ae23;
+	border-radius: 4px;
+	font-size: 1.2rem;
+}
+.subscribe_form input[type=text]::placeholder {
+	color: #ccc;
+}
+
+.subscribe_form button {
+	margin-top: 1.8rem;
+	width: 25%;
+	padding: .8rem;
+	background: #90ae23;
+	border: none;
+	border-radius: 4px;
+	animation-name: buttonMove;
+	animation-duration: 3.5s;
+	animation-timing-function: liner;
+	animation-iteration-count: infinite;
+	/* animation-fill-mode: both; */
+}
+    /* animation-name: cardUp;
+    animation-duration: .5s;
+	animation-timing-function: liner;
+	animation-fill-mode: both; */
+
+@keyframes buttonMove {
     0% {
-        transform: translateY(0);
+		transform: rotate(0);
     }
-    100% {
-        transform: translateY(-1rem);
+    25% {
+		transform: rotate(0);
+    }
+    30% {
+		transform: rotate(2deg);
+    }
+	35% {
+		transform: rotate(0);
+    }
+    40% {
+		transform: rotate(4deg);
+    }
+    45% {
+		transform: rotate(0deg);
+    }
+	50% {
+		transform: rotate(0);
+    }
+	100% {
+		transform: rotate(0);
     }
 }
+
 
 
 /** ========================================
@@ -254,10 +358,5 @@ footer {
 	color: #fff;
 	text-align: center;
 }
-.content_news a {
-	overflow: hidden;
-	display: inline-block;
-	width: calc(100% - 10rem);
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
+
+
