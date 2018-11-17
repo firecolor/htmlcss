@@ -3,14 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ウェブ制作を学べるサイト - LCW</title>
 	<meta name="description" content="LCWはウェブサイトの制作をだれでも気軽に学べるサービスです">
 	<meta name="keywords" content="ウェブサイト,HTML,CSS,フロントエンド">
 
 	<meta name="robots" content="NOINDEX,NOFOLLOW">
 	<link rel="canonical" href="">
-	
-	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> -->
+
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -20,8 +20,9 @@
 		<p>ウェブ制作を学べるサイト</p>
 		<h1>LCW</h1>
 	</header>
-	<main><!-- フロー・コンテントが期待される場所。ただし、祖先に article, aside, footer, header, nav 要素があってはならない。 -->
+	<main>
 
+		<!-- LCWとは -->
 		<section>
 			<div class="content content_overview">
 				<h2 class="content_heading">LCWとは</h2>
@@ -33,13 +34,14 @@
 			</div>
 		</section>
 
+		<!-- 特徴 -->
 		<section>
 			<div class="content content_feature">
 				<h2 class="content_heading">LCWの特徴</h2>
 
 				<div class="feature_cards">
 					<div class="card">
-						<h3 class="card_title">いつでもどこでも学べる</h3>
+						<h3 class="card_title">HTML5の情報</h3>
 						<div class="card_text">
 							<p>情報が古くなってきていますが、HTML5のことを知るなら目を通して損はないと思います。</p>
 						</div>
@@ -48,7 +50,7 @@
 						</div>
 					</div>
 					<div class="card">
-						<h3 class="card_title">無料で気軽に学べる</h3>
+						<h3 class="card_title">対応状況を調べる</h3>
 						<div class="card_text">
 							<p>HTMLやCSS、JSなどのプロパティなどがどのブラウザに対応しているか調べることができます</p>
 						</div>
@@ -57,12 +59,13 @@
 						</div>
 					</div>
 					<div class="card">
-						<h3 class="card_title">現場で使える実践的な内容</h3>
+						<h3 class="card_title">配色に迷ったら</h3>
 						<div class="card_text">
-							<p>https://caniuse.com/#search=CSS%20Variables iOS Safari、Chrome for Android、Edge、Firefox、Chrome、MacOS Safari</p>
+							<p>配色を決めるにはそれなりの知識が必要になります。</p>
+							<p>そんな時はツールに頼っちゃいましょう！</p>
 						</div>
 						<div class="card_link">
-							<a href="http://www.html5.jp/">http://www.html5.jp/</a>
+							<a href="http://paletton.com/">Paletton.com</a>
 						</div>
 					</div>
 				</div>
@@ -70,6 +73,7 @@
 			</div><!-- /.content_feature -->
 		</section>
 
+		<!-- お知らせ -->
 		<section>
 			<div class="full_width full_width_news">
 				<div class="content content_news">
@@ -83,11 +87,12 @@
 			</div>
 		</section>
 
+		<!-- 申し込み -->
 		<section>
-			<div class="content content_subscribe">
-				<h2 class="content_heading">LCMに申し込む</h2>
-				<div class="subscribe_form" data-cacth="Subscribe！！">
-					<form action="">
+			<div class="content content_subscribe" data-cacth="Subscribe！！">
+				<h2 class="content_heading">LCWに申し込む</h2>
+				<div class="subscribe_form">
+					<form action="email">
 						<label for="">メールアドレス</label><input type="text" id="email" placeholder="メールアドレスを入力"><br>
 						<button type="button">申し込み</button>
 					</form>
