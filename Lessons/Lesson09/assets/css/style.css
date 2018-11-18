@@ -77,18 +77,6 @@ input:focus,textarea:focus,button:focus {
  * 全般
  * ====================================== */
 /** --------------------
- * カスタムプロパティ（今回はメモに使用した）
- * ------------------ */
- :root {
-	--color-primaly: #90ae23;
-	--color-primaly-md: #728E0C;
-	--color-primaly-d: #4e5e15;
-	--color-secondly: #1D5175;
-	--color-secondly-d: #042944;
-	--color-accent:  #A72241;
-}
-
-/** --------------------
  * 全体
  * ------------------ */
 body {
@@ -183,20 +171,6 @@ main {
 }
 
 
-@media screen and (max-width: 1024px) {
-	.content {
-		padding: 0 1rem;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	.content {
-		max-width: initial;
-		margin-top: 4rem;
-	}
-}
-
-
 /* ------------------------------
  * overview
  * LCWとは
@@ -287,30 +261,6 @@ main {
 	transform: translate(-50%, -50%) scale(1.125);
 }
 
-
-@media screen and (max-width: 640px) {
-
-	.feature_cards {
-		display: block;
-	}
-
-	.card {
-		width: 100%;
-	}
-
-	.card:not(:nth-child(3n + 1)) {
-		margin-left: 0;
-	}
-	.card:nth-child(n + 4) {
-		margin-top: 0;
-	}
-	.card:not(:first-child) {
-		margin-top: 2rem;
-	}
-
-}
-
-
 /* ------------------------------
  * news
  * お知らせ
@@ -343,7 +293,6 @@ main {
 .news_list a:hover {
 	opacity: .5;
 }
-
 
 /* ------------------------------
  * subscribe
@@ -478,21 +427,6 @@ main {
 	}
 }
 
-
-@media screen and (max-width: 640px) {
-	.content_subscribe {
-		margin-top: 8rem;
-	}
-	.subscribe_form label {
-		display: none;
-	}
-	.subscribe_form input[type=text] {
-		width: 100%;
-	}
-	.subscribe_form button {
-		width: 50%;
-	}
-}
 
 
 /** ========================================

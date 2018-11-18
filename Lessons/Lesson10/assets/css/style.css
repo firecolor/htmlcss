@@ -77,18 +77,6 @@ input:focus,textarea:focus,button:focus {
  * 全般
  * ====================================== */
 /** --------------------
- * カスタムプロパティ（今回はメモに使用した）
- * ------------------ */
- :root {
-	--color-primaly: #90ae23;
-	--color-primaly-md: #728E0C;
-	--color-primaly-d: #4e5e15;
-	--color-secondly: #1D5175;
-	--color-secondly-d: #042944;
-	--color-accent:  #A72241;
-}
-
-/** --------------------
  * 全体
  * ------------------ */
 body {
@@ -195,7 +183,6 @@ main {
 		margin-top: 4rem;
 	}
 }
-
 
 /* ------------------------------
  * overview
@@ -344,7 +331,6 @@ main {
 	opacity: .5;
 }
 
-
 /* ------------------------------
  * subscribe
  * LCWに申し込む
@@ -478,7 +464,6 @@ main {
 	}
 }
 
-
 @media screen and (max-width: 640px) {
 	.content_subscribe {
 		margin-top: 8rem;
@@ -493,6 +478,7 @@ main {
 		width: 50%;
 	}
 }
+
 
 
 /** ========================================

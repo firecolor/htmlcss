@@ -77,18 +77,6 @@ input:focus,textarea:focus,button:focus {
  * 全般
  * ====================================== */
 /** --------------------
- * カスタムプロパティ（今回はメモに使用した）
- * ------------------ */
- :root {
-	--color-primaly: #90ae23;
-	--color-primaly-md: #728E0C;
-	--color-primaly-d: #4e5e15;
-	--color-secondly: #1D5175;
-	--color-secondly-d: #042944;
-	--color-accent:  #A72241;
-}
-
-/** --------------------
  * 全体
  * ------------------ */
 body {
@@ -183,20 +171,6 @@ main {
 }
 
 
-@media screen and (max-width: 1024px) {
-	.content {
-		padding: 0 1rem;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	.content {
-		max-width: initial;
-		margin-top: 4rem;
-	}
-}
-
-
 /* ------------------------------
  * overview
  * LCWとは
@@ -229,12 +203,7 @@ main {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	overflow-wrap: break-word;
-	transition: all .3s linear;
 }
-.card:hover {
-	transform: translateY(-1rem);
-}
-
 
 .card:not(:nth-child(3n + 1)) {
 	margin-left: 1rem;
@@ -283,32 +252,6 @@ main {
 	opacity: .9;
 	box-shadow: none;
 }
-.card:hover .card_link a {
-	transform: translate(-50%, -50%) scale(1.125);
-}
-
-
-@media screen and (max-width: 640px) {
-
-	.feature_cards {
-		display: block;
-	}
-
-	.card {
-		width: 100%;
-	}
-
-	.card:not(:nth-child(3n + 1)) {
-		margin-left: 0;
-	}
-	.card:nth-child(n + 4) {
-		margin-top: 0;
-	}
-	.card:not(:first-child) {
-		margin-top: 2rem;
-	}
-
-}
 
 
 /* ------------------------------
@@ -344,7 +287,6 @@ main {
 	opacity: .5;
 }
 
-
 /* ------------------------------
  * subscribe
  * LCWに申し込む
@@ -356,36 +298,6 @@ main {
 	text-align: center;
 }
 
-/** --------------------
- * 吹き出し
- * ------------------ */
-.content_subscribe::before {
-	content: attr(data-cacth);
-	position: absolute;
-	display: inline-block;
-	top: -12%;
-	left: 50%;
-	width: 12rem;
-	padding: 1.4rem 0;
-	background: #728E0C;
-	border-radius: 50%;
-	color: #fff;
-	font-size: 1rem;
-	text-align: center;
-	transform: translate(-50%, -100%) rotate(-8deg);
-}
-.content_subscribe::after {
-	content: "";
-	position: absolute;
-	display: inline-block;
-	top: -12%;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-top: 16px solid #728E0C;
-	transform: translate(-50%, 0) rotate(-8deg);
-}
 
 /** --------------------
  * インプットのラベル
@@ -428,82 +340,8 @@ main {
 	color: #fff;
 	font-size: 1.2rem;
 	cursor: pointer;
-	animation-name: buttonAnime;
-	animation-duration: 3.5s;
-	animation-timing-function: ease-in;
-	animation-iteration-count: infinite;
 }
 .subscribe_form button:hover {
 	box-shadow: none;
-	animation-name: buttonAnime2;
 	box-shadow: inset 0 1px 1px 0 #4e5e15;
-}
-
-
-/** --------------------
- * アニメーションのキーフレーム
- * ------------------ */
-@keyframes buttonAnime {
-	0% {
-		transform: rotate(0);
-	}
-	25% {
-		transform: rotate(0);
-	}
-	30% {
-		transform: rotate(2deg);
-	}
-	35% {
-		transform: rotate(0);
-	}
-	40% {
-		transform: rotate(4deg);
-	}
-	45% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(0);
-	}
-}
-@keyframes buttonAnime2 {
-	0% {
-		transform: translateY(2px);
-	}
-	100% {
-		transform: translateY(2px);
-	}
-}
-
-
-@media screen and (max-width: 640px) {
-	.content_subscribe {
-		margin-top: 8rem;
-	}
-	.subscribe_form label {
-		display: none;
-	}
-	.subscribe_form input[type=text] {
-		width: 100%;
-	}
-	.subscribe_form button {
-		width: 50%;
-	}
-}
-
-
-/** ========================================
- * @FOOTER
- * フッター
- * ====================================== */
-footer {
-	width: 100%;
-	margin-top: 8rem;
-	padding: 3.5rem;
-	background: #90ae23;
-	color: #fff;
-	text-align: center;
 }
