@@ -28,10 +28,12 @@ main {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	vertical-align: baseline;
+	font-size: 100%;
+	font: inherit;
 	font-style: normal;
+	vertical-align: baseline;
 	/*aタグとかをタップしたときに色が変わるのを防ぐ*/
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(253, 153, 153, 0);
 	/*回転したときなど文字の大きさを調整*/
 	-webkit-text-size-adjust : 100% ;
 }
@@ -40,8 +42,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section,
 main {
 	display: block;
-}
-body {
 }
 ol, ul {
 	list-style: none;
@@ -80,7 +80,7 @@ input:focus,textarea:focus,button:focus {
  * 全体
  * ------------------ */
 body {
-	font-size: 100%;
+	font-size: 16px;
 	line-height: 1;
 }
 body,
@@ -121,6 +121,7 @@ header h1 {
 	z-index: 1;
 	margin-top: 1rem;
 	font-size: 3.5rem;
+	font-weight: bold;
 }
 
 
@@ -147,6 +148,7 @@ main {
 	padding-bottom: 1.2rem;
 	color: #90ae23;
 	font-size: 1.8rem;
+	font-weight: bold;
 	text-align: center;
 }
 .content_heading::after {
